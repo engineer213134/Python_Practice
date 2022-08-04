@@ -1,0 +1,19 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+
+
+from collections import deque
+
+de = deque()
+
+#For loop takes 6 commands to append to the double ended queue
+for _ in range(int(input())):
+#this means that cmd is gonna get the first string output from input().split() and the rest of the outputs from the input(),split() will form a list(for example ['1'] or ['3','4']) and this list will be assigned to the args:p so the asterisk'ed variable will just get the rest of the outputs in a form of a list
+    command,*inp = input().split()
+    
+    
+    #getattr takes object of a function and string the map function maps each inp to a int so changes string to int
+    getattr(de,command)(*map(int,inp))
+
+print(*de)
+    
