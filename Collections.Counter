@@ -1,0 +1,24 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import Counter
+
+#Use n as variable of input
+numshoes=int(input())
+#Read inputs from the STDIN using the map function, We use the strip() and split() method
+a = Counter(map(int,input().strip().split()))
+#Hold the number of customers
+numcust = int(input())
+total=0
+
+#Loop the number of customers
+
+for x in range(0,numcust):
+    #Take the input assighn to both size and price
+    size, price = map(int, input().split())
+    if a[size]:
+        total += price
+        a[size] -= 1         
+print(total)
+
+
+    
+    
