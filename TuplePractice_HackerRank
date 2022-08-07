@@ -1,0 +1,10 @@
+if __name__ =if __name__ == '__main__':
+    #Take the input n that is the number of elements in the tuple
+    n = int(input())
+    #Take the second input and map the values to split method and change to a tuple
+    integer_tuple = tuple(map(int, input().split()))
+    #Perform the hash function on each item in the tuple
+    for x in range(n):
+        hashlist=int(hash(integer_tuple))
+    print(hashlist)
+#Why use a tuple ? Tuples are more memory efficent since size is fixed and order never changes than lists the values do not change good for when you want unchanged data
