@@ -1,0 +1,26 @@
+#Given two unsorted arrays A of size N and B of size M of distinct elements, 
+#the task is to find all pairs from both arrays whose sum is equal to X.
+
+#Planned Code:
+    #Define Pair List for storing pairs
+    #Sort arrays A and B
+    #Compare element at index (0) in array A to element (0) in array B with nested for-loops
+    #If Element (0) Of A + Element (0) of B == 9
+    #Then append element(0) Of A and Element(0) of B in list pairs as type string and print both pairs
+    #Hold element (0) at Array A compare tp element (1) of Array B
+    #Print Pairs List
+
+# Your code goes here     
+A = [1,5,9,8,7,2,7]  
+B = [1,8,9,4,6,9,2]
+X = 9
+    
+pairs = []
+A.sort()
+B.sort()
+for i in range(len(A)):
+    for j in range(len(B)):
+        if (i + j) == X:
+            pairs.append(str(i)+' '+str(j))
+            print(str(i) +' '+ str(j))
+print(pairs)  
