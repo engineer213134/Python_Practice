@@ -1,0 +1,43 @@
+#User function Template for python3
+
+def isValid(s):
+    #code here
+    x=0
+    
+    #Use string split method
+    y = s.split(".")
+    #Map string list to a in list
+    
+    y = list(map(int,y))
+    
+    
+    for i in range(len(y)):
+        #Check each item in the list if its between (0-255)
+        if (y[i] <= 255):
+            x=x+1 
+            
+      
+    if x == 4:
+        return 1
+    else:
+        return 0
+
+
+
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+    
+if __name__=="__main__":
+    t=int(input())
+    for _ in range(0,t):
+        s=input()
+        if(isValid(s)):
+            print(1)
+        else:
+            print(0)
+    
+
+# } Driver Code Ends
