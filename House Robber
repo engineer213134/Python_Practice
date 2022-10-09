@@ -1,1 +1,42 @@
+User function Template for python3
 
+class Solution:  
+    
+    #Function to find the maximum money the thief can get.
+    def FindMaxSum(self,a, n):
+        
+        #Cannot access two indexs that are consecutive right next to each other get the max ammount of money
+        #Key to this problem is creating a subproblem dynamic programming
+        
+        #Define to variables that we will use to calculate the best order of houses to rob
+        rob1,rob2 = 0,0
+        #Loop to iterate throught array a
+        for i in a:
+            #Define a temp value that will hold max number when comparing (i+rob1,rob2)
+            temp = max(i+rob1,rob2)
+            #max of two variables will be assigned to temp
+            rob1=rob2
+            rob2=temp
+        return rob2
+        
+        
+        
+        
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+import atexit
+import io
+import sys
+sys.setrecursionlimit(10**6)
+# Contributed by : Nagendra Jha
+
+if __name__ == '__main__':
+    test_cases = int(input())
+    for cases in range(test_cases):
+        n = int(input())
+        a = list(map(int,input().strip().split()))
+        ob=Solution()
+        print(ob.FindMaxSum(a,n))
+# } Driver Code Ends
