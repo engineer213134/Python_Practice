@@ -1,0 +1,38 @@
+#User function Template for python3
+class Solution:
+
+	def matchPairs(self,nuts, bolts, n):
+		#need to rearage array to match nuts and bolts must be the same sequence
+		#Using sort method which sorts according to there ASCII values
+	    bolts.sort()
+	    nuts.sort()
+	    #How he sort method for python works
+	    #https://medium.com/ub-women-data-scholars/the-magic-behind-the-sort-algorithm-in-python-1cb9515294b5
+	        
+	        
+	    
+
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+
+
+if __name__ == '__main__':
+    tc = int(input())
+    while tc > 0:
+        n = int(input())
+        nuts = list(map(str, input().strip().split()))
+        bolts = list(map(str, input().strip().split()))
+        ob = Solution()
+        ob.matchPairs(nuts, bolts, n)
+        for x in nuts:
+            print(x, end=" ")
+        print()
+        for x in bolts:
+            print(x, end=" ")
+        print()
+        tc -= 1
+
+# } Driver Code Ends
